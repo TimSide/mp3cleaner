@@ -36,7 +36,7 @@ public class TestAudioInformationParser {
 
     @Test
     public void whenGetArtistName() {
-        String originalFileName = "David Guetta, Martin Garrix & Brooks - Like I Do (Extended Mix)";
+        String originalFileName = "David Guetta, Martin Garrix & Brooks - Like I Do (Extended Mix).mp3";
         String artistName = audioInformationParser.getArtistName(originalFileName);
 
         Assert.assertEquals("David Guetta, Martin Garrix & Brooks", artistName);
@@ -44,7 +44,7 @@ public class TestAudioInformationParser {
 
     @Test
     public void whenGetTrackTitle() {
-        String originalFileName = "David Guetta, Martin Garrix & Brooks - Like I Do (Extended Mix)";
+        String originalFileName = "David Guetta, Martin Garrix & Brooks - Like I Do (Extended Mix).mp3";
         String trackTitle = audioInformationParser.getTrackTitle(originalFileName);
 
         Assert.assertEquals("Like I Do (Extended Mix)", trackTitle);

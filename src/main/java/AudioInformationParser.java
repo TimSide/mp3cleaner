@@ -18,7 +18,8 @@ class AudioInformationParser {
 
     String getTrackTitle(String filename) {
         int dash = filename.indexOf(" - ") + 3;
-        return filename.substring(dash);
+        int fileFormat = filename.lastIndexOf(".");
+        return filename.substring(dash, fileFormat);
     }
 
     String getParsedTrackLength(long lengthInSeconds) {
