@@ -1,6 +1,6 @@
 package com.mp3cleaner.ui;
 
-import com.mp3cleaner.entity.Contact;
+import com.mp3cleaner.service.Contact;
 import com.mp3cleaner.parsers.AudioInformationParser;
 import com.mp3cleaner.parsers.DirectoryParser;
 import com.mp3cleaner.service.ContactService;
@@ -13,21 +13,12 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.StringUtils;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Date: 27.08.15
- * Time: 11:10
- *
- * @author Ruslan Molchanov (ruslanys@gmail.com)
- * @author http://mruslan.com
- */
 @SuppressWarnings("SpringJavaAutowiringInspection")
 public class MainController {
 

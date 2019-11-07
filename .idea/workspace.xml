@@ -1,35 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27ae3b33-4da5-4c7d-94e3-328e844b2f67" name="Default Changelist" comment="Update Maven dependencies">
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/AbstractJavaFxApplicationSupport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/ControllersConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/entity/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/entity/ContactWithProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/repository/ContactRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/ui/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mp3cleaner/ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="27ae3b33-4da5-4c7d-94e3-328e844b2f67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mp3cleaner.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AudioInformationParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/parsers/AudioInformationParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DirectoryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/parsers/DirectoryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestAudioInformationParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AudioInformationParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DirectoryParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/ControllersConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/ControllersConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/ui/MainController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,53 +58,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="com.mp3cleaner" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="com.mp3cleaner" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="com.mp3cleaner" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mp3cleaner.Application" />
@@ -147,7 +79,8 @@
       <updated>1573066684427</updated>
       <workItem from="1573066685614" duration="1750000" />
       <workItem from="1573068583722" duration="602000" />
-      <workItem from="1573083496587" duration="1311000" />
+      <workItem from="1573083496587" duration="1385000" />
+      <workItem from="1573084923985" duration="258000" />
     </task>
     <task id="LOCAL-00001" summary="Update Maven dependencies">
       <created>1573068942378</created>
@@ -156,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573068942378</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactor code">
+      <created>1573085129508</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573085129508</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Maven dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Maven dependencies" />
+    <MESSAGE value="Refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor code" />
   </component>
 </project>
