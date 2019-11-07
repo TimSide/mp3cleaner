@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mp3cleaner" />
+        <module name="com.mp3cleaner" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.mp3cleaner" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
