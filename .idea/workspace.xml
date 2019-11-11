@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27ae3b33-4da5-4c7d-94e3-328e844b2f67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/Mp3Cleaner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/errors/FolderNotSelectedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mp3cleaner/CustomTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/parsers/DirectoryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/parsers/DirectoryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/Contact.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/service/ContactServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mp3cleaner/ui/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +104,7 @@
       <workItem from="1573068583722" duration="602000" />
       <workItem from="1573083496587" duration="1385000" />
       <workItem from="1573084923985" duration="258000" />
-      <workItem from="1573498357786" duration="7986000" />
+      <workItem from="1573498357786" duration="12125000" />
     </task>
     <task id="LOCAL-00001" summary="Update Maven dependencies">
       <created>1573068942378</created>
@@ -131,7 +120,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573085129508</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implement choosing folder with entry music files">
+      <created>1573509360701</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573509360701</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add filters by type of music files, refactor code">
+      <created>1573512986402</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573512986402</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +156,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Maven dependencies" />
     <MESSAGE value="Refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor code" />
+    <MESSAGE value="Implement choosing folder with entry music files" />
+    <MESSAGE value="Add filters by type of music files, refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add filters by type of music files, refactor code" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

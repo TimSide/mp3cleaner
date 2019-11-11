@@ -43,7 +43,7 @@ public class ControllersConfiguration {
      * Класс - оболочка: контроллер мы обязаны указать в качестве бина,
      * а view - представление, нам предстоит использовать в точке входа {@link Application}.
      */
-    public class ViewHolder {
+    public static class ViewHolder {
         private Parent view;
         private Object controller;
 
@@ -56,17 +56,8 @@ public class ControllersConfiguration {
             return view;
         }
 
-        public void setView(Parent view) {
-            this.view = view;
-        }
-
         Object getController() {
             return controller;
         }
-
-        public void setController(Object controller) {
-            this.controller = controller;
-        }
     }
-
 }

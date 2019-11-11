@@ -1,8 +1,9 @@
 package com.mp3cleaner.ui;
 
+import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
-import com.mp3cleaner.Mp3Cleaner;
 import com.mp3cleaner.errors.FolderNotSelectedException;
+import com.mp3cleaner.parsers.DirectoryParser;
 import javafx.fxml.FXML;
 import javafx.stage.DirectoryChooser;
 
@@ -13,15 +14,17 @@ import java.util.List;
 @SuppressWarnings("SpringJavaAutowiringInspection")
 public class MainController {
 
-    private Mp3Cleaner mp3Cleaner;
-
-//    // Инъекции Spring
-//    @Autowired
-//    private ContactService contactService;
+    private DirectoryParser directoryParser;
 
     // Инъекции JavaFX
     @FXML
     private JFXTextField tf_path;
+
+    @FXML
+    private JFXCheckBox checkbox_mp3;
+
+    @FXML
+    private JFXCheckBox checkbox_wav;
 
     /**
      * Инициализация контроллера от JavaFX.
@@ -38,8 +41,7 @@ public class MainController {
      */
     @FXML
     public void initialize() {
-        // Этап инициализации JavaFX
-        this.mp3Cleaner = new Mp3Cleaner();
+        this.directoryParser = new DirectoryParser(checkbox_mp3.isSelected(), checkbox_wav.isSelected());
     }
 
     /**
@@ -55,17 +57,34 @@ public class MainController {
         directoryChooser.setTitle("Select directory with audio files");
         File directory = directoryChooser.showDialog(tf_path.getScene().getWindow());
 
-        try {
-            if (directory == null) {
-                throw new FolderNotSelectedException();
-            }
+        if (directory != null) {
             tf_path.setText(directory.getAbsolutePath());
+            directoryParser.setSelectedDirectory(directory);
+            getFiles();
+        }
+    }
 
-            List<File> filesFromSelectedPath = mp3Cleaner.getMusicFilesFromSelectedPath(directory);
 
+    @FXML
+    public void mp3CheckboxChange() {
+        this.directoryParser.setAllowMp3(checkbox_mp3.isSelected());
+    }
+
+    @FXML
+    public void wavCheckboxChange() {
+        this.directoryParser.setAllowWav(checkbox_wav.isSelected());
+    }
+
+    @FXML
+    public void getFiles() {
+        try {
+            File selectedDirectory = directoryParser.getSelectedDirectory();
+            List<File> filesFromSelectedPath = directoryParser.getAllMp3FilesFromDirectory(selectedDirectory);
+
+            // TODO: add files to player playlist
             filesFromSelectedPath.forEach(System.out::println);
         } catch (FolderNotSelectedException e) {
-            System.err.println("Folder not selected");
+            e.getMessage();
         }
     }
 
@@ -93,7 +112,7 @@ public class MainController {
 ////
 ////        File selectedFolderPath = new File("C:\\Users\\Admin\\Desktop\\dir");
 ////
-////        List<File> allFilesFromFolder = directoryParser.getAllMp3FilesFromFolder(selectedFolderPath);
+////        List<File> allFilesFromFolder = directoryParser.getAllMp3FilesFromDirectory(selectedFolderPath);
 ////
 ////        List<File> allMp3Files = directoryParser.getOnlyMp3(allFilesFromFolder);
 ////

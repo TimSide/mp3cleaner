@@ -8,22 +8,29 @@ import java.util.List;
 import java.util.Objects;
 
 public class DirectoryParser {
-    private boolean allowMp3 = true;
-    private boolean allowWav = false;
+    private boolean allowMp3;
+    private boolean allowWav;
+    private File selectedDirectory;
 
-    public List<File> getAllMp3FilesFromFolder(final File folder) throws FolderNotSelectedException {
-        if (folder == null) {
+    public DirectoryParser(boolean allowMp3, boolean allowWav) {
+        this.allowMp3 = allowMp3;
+        this.allowWav = allowWav;
+        this.selectedDirectory = null;
+    }
+
+    public List<File> getAllMp3FilesFromDirectory(final File selectedDirectory) throws FolderNotSelectedException {
+        if (selectedDirectory == null) {
             throw new FolderNotSelectedException();
         }
 
-        System.out.println("Current folder: " + folder.getName());
+//        System.out.println("Current folder: " + folder.getName());
 
         List<File> foundFiles = new ArrayList<>();
 
-        if (folder.listFiles() != null) {
-            for (final File file : Objects.requireNonNull(folder.listFiles())) {
+        if (selectedDirectory.listFiles() != null) {
+            for (final File file : Objects.requireNonNull(selectedDirectory.listFiles())) {
                 if (file.isDirectory()) {
-                    getAllMp3FilesFromFolder(file).forEach(f -> {
+                    getAllMp3FilesFromDirectory(file).forEach(f -> {
                         if (filterFile(f)) {
                             foundFiles.add(f);
                         }
@@ -58,5 +65,23 @@ public class DirectoryParser {
 
     private boolean isWav(File file) {
         return file.getName().endsWith(".wav");
+    }
+
+    public File getSelectedDirectory() {
+        return selectedDirectory;
+    }
+
+    public void setSelectedDirectory(File selectedDirectory) {
+        this.selectedDirectory = selectedDirectory;
+    }
+
+    public void setAllowMp3(boolean allowMp3) {
+        System.out.println("MP3: " + allowMp3);
+        this.allowMp3 = allowMp3;
+    }
+
+    public void setAllowWav(boolean allowWav) {
+        System.out.println("WAV: " + allowWav);
+        this.allowWav = allowWav;
     }
 }
