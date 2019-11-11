@@ -1,31 +1,62 @@
 package com.mp3cleaner.parsers;
 
+import com.mp3cleaner.errors.FolderNotSelectedException;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class DirectoryParser {
+    private boolean allowMp3 = true;
+    private boolean allowWav = false;
 
-    private File selectedFolderPath = new File("C:\\Users\\Admin\\Desktop\\dir");
+    public List<File> getAllMp3FilesFromFolder(final File folder) throws FolderNotSelectedException {
+        if (folder == null) {
+            throw new FolderNotSelectedException();
+        }
 
-    public List<File> getAllFilesFromFolder(final File folder) {
+        System.out.println("Current folder: " + folder.getName());
+
         List<File> foundFiles = new ArrayList<>();
 
-        for (final File fileEntry : Objects.requireNonNull(folder.listFiles())) {
-            if (fileEntry.isDirectory()) {
-                foundFiles.addAll(getAllFilesFromFolder(fileEntry));
-            } else {
-                foundFiles.add(fileEntry);
+        if (folder.listFiles() != null) {
+            for (final File file : Objects.requireNonNull(folder.listFiles())) {
+                if (file.isDirectory()) {
+                    getAllMp3FilesFromFolder(file).forEach(f -> {
+                        if (filterFile(f)) {
+                            foundFiles.add(f);
+                        }
+                    });
+                } else {
+                    if (filterFile(file)) {
+                        foundFiles.add(file);
+                    }
+                }
             }
         }
         return foundFiles;
     }
 
-    public List<File> getOnlyMp3(List<File> unfilteredFiles) {
-        return unfilteredFiles.stream()
-                .filter(file -> file.getName().toLowerCase().endsWith(".mp3"))
-                .collect(Collectors.toList());
+    /**
+     * @param file: accept file, checks for turned filters (mp3 or wav)
+     * @return true: if input file is mp3 or wav, else returns false
+     */
+    private boolean filterFile(File file) {
+        if (allowMp3) {
+            if (isMp3(file)) return true;
+        }
+        if (allowWav) {
+            if (isWav(file)) return true;
+        }
+        return false;
+    }
+
+    private boolean isMp3(File file) {
+        return file.getName().endsWith(".mp3");
+    }
+
+    private boolean isWav(File file) {
+        return file.getName().endsWith(".wav");
     }
 }

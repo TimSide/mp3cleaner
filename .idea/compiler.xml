@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="com.mp3cleaner" target="1.8" />
+      <module name="com.mp3cleaner" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
